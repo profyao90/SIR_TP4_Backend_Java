@@ -11,7 +11,7 @@ import domaine.Heater;
 import domaine.Person;
 import domaine.Residence;
 
-public class HeaterJpa {
+public class HeaterDAO {
 	
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("mysql");
 
@@ -48,10 +48,10 @@ public class HeaterJpa {
 	}
 
 	public static void main(String[] args) {
-		HeaterJpa hjp = new HeaterJpa();
+		HeaterDAO hjp = new HeaterDAO();
 		/*System.out.println(hjp.getHeaterBy(1L).getNameHeater());*/
-		ResidenceJpa ResidenceJpa = new ResidenceJpa();
-		Residence beaulieu = ResidenceJpa.getResidenceBy(1L);
+		ResidenceDAO ResidenceDAO = new ResidenceDAO();
+		Residence beaulieu = ResidenceDAO.getResidenceBy(1L);
 		Heater Heater = new Heater("nameHeater",100, beaulieu);
 		hjp.createHeater(Heater);
 	}

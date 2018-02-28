@@ -11,7 +11,7 @@ import domaine.ElectronicDivice;
 import domaine.Heater;
 import domaine.Residence;
 
-public class ElectronicDiviceJpa {
+public class ElectronicDiviceDAO {
 	
 	
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("mysql");
@@ -49,10 +49,10 @@ public class ElectronicDiviceJpa {
 	}
 
 	public static void main(String[] args) {
-		ElectronicDiviceJpa ejp = new ElectronicDiviceJpa();
+		ElectronicDiviceDAO ejp = new ElectronicDiviceDAO();
 		/*System.out.println(pjp.getElectronicDiviceBy(1L).getNameElectro());*/
-		ResidenceJpa ResidenceJpa = new ResidenceJpa();
-		Residence beaulieu = ResidenceJpa.getResidenceBy(1);
+		ResidenceDAO ResidenceDAO = new ResidenceDAO();
+		Residence beaulieu = ResidenceDAO.getResidenceBy(1);
 		ElectronicDivice ElectronicDivice = new ElectronicDivice("nameElectro", 10, beaulieu);
 		ejp.createElectronicDivice(ElectronicDivice);
 		

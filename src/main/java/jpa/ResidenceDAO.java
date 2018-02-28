@@ -10,7 +10,7 @@ import javax.persistence.Persistence;
 import domaine.Person;
 import domaine.Residence;
 
-public class ResidenceJpa {
+public class ResidenceDAO {
 
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("mysql");
 
@@ -47,11 +47,11 @@ public class ResidenceJpa {
 	}
 
 	public static void main(String[] args) {
-		ResidenceJpa rjp = new ResidenceJpa();
+		ResidenceDAO rjp = new ResidenceDAO();
 		/*System.out.println(pjp.getResidenceBy(1L).getNameResidence());*/
 		
-		PersonJpa personJpa = new PersonJpa();
-		Person aubin= personJpa.getPersonBy(1L);
+		PersonDAO personDAO = new PersonDAO();
+		Person aubin= personDAO.getPersonBy(1L);
 		Residence residence = new Residence("Appart", aubin, null);
 		rjp.createResidence(residence);
 		

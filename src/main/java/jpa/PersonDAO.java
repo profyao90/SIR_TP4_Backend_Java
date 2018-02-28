@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
 
 import domaine.Person;
 
-public class PersonJpa {
+public class PersonDAO {
 
 	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("mysql");
 
@@ -46,7 +46,7 @@ public class PersonJpa {
 	}
 
 	public static void main(String[] args) {
-		PersonJpa pjp = new PersonJpa();
+		PersonDAO pjp = new PersonDAO();
 		System.out.println(pjp.getPersonBy(1L).getPrenom());
 	}
 
