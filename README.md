@@ -1,5 +1,5 @@
-# SIR_TP_Backend_Java
-# Trinome : Aubin Yao, williams kalo,Amadou Bah.  
+# SIR_TP4_Backend_Java
+# Trinome : Aubin Yao, williams koffi, Amadou Bah.  
 Rendu du tp SIR. Le Backend Java utilisant la persistance les servlet et DAO
 L’objectif de ce projet est de continuer le développement d’une application type réseau social permettant de comparer sa consommation électrique avec ses amis, ses voisins,
 dans la lignée de opower.
