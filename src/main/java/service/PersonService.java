@@ -15,13 +15,13 @@ import javax.ws.rs.core.Response;
 
 import domaine.Person;
 import domaine.Residence;
-import jpa.PersonJpa;
-import jpa.ResidenceJpa;
+import jpa.PersonDAO;
+import jpa.ResidenceDAO;
 
 @Path("/person")
 public class PersonService {
 	
-	PersonJpa dao = new PersonJpa();
+	PersonDAO dao = new PersonDAO();
 			
 			@GET
 			@Produces(MediaType.APPLICATION_JSON)
