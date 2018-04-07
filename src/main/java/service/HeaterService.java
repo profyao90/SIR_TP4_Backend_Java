@@ -13,11 +13,11 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import domaine.Heater;
-import jpa.HeaterJpa;
+import jpa.HeaterDAO;
 
 public class HeaterService {
 
-	HeaterJpa dao = new HeaterJpa();
+	HeaterDAO dao = new HeaterDAO();
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
