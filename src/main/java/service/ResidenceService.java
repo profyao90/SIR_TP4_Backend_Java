@@ -14,13 +14,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import domaine.Residence;
-import jpa.ResidenceJpa;
+import jpa.ResidenceDAO;
 
 
 @Path("/residence")
 public class ResidenceService {
 	
-	ResidenceJpa dao = new ResidenceJpa();
+	ResidenceDAO dao = new ResidenceDAO();
 		
 		@GET
 		@Produces(MediaType.APPLICATION_JSON)
